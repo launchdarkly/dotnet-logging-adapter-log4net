@@ -1,0 +1,84 @@
+version: 2.1
+
+orbs:
+  win: circleci/windows@2.4.0
+
+workflows:
+  version: 2
+  test:
+    jobs:
+      - build-test-linux:
+          name: .NET Core 2.1 - Linux
+          docker-image: mcr.microsoft.com/dotnet/core/sdk:2.1-focal
+          build-target-framework: netstandard2.0
+          test-target-framework: netcoreapp2.1
+      - build-test-linux:
+          name: .NET Core 3.1 - Linux
+          docker-image: mcr.microsoft.com/dotnet/core/sdk:3.1-focal
+          build-target-framework: netstandard2.0
+          test-target-framework: netcoreapp3.1
+      - build-test-linux:
+          name: .NET 5.0 - Linux
+          docker-image: mcr.microsoft.com/dotnet/sdk:5.0-focal
+          build-target-framework: netstandard2.0
+          test-target-framework: net5.0
+      - build-test-windows:
+          name: .NET Framework 4.5.2 - Windows
+          build-target-framework: net452
+          test-target-framework: net452
+      - build-test-windows:
+          name: .NET Framework 4.6.1 - Windows
+          build-target-framework: net452
+          test-target-framework: net461
+
+jobs:
+  build-test-linux:
+    parameters:
+      docker-image:
+        type: string
+      build-target-framework:
+        type: string
+      test-target-framework:
+        type: string
+    docker:
+      - image: <<parameters.docker-image>>
+    environment:
+      ASPNETCORE_SUPPRESSSTATUSMESSAGES: true
+      BUILDFRAMEWORKS: <<parameters.build-target-framework>>
+      TESTFRAMEWORK: <<parameters.test-target-framework>>
+    steps:
+      - checkout
+      - run:
+          name: restore dependencies
+          command: dotnet restore src/LaunchDarkly.Logging.Log4net
+      - run:
+          name: build
+          command: dotnet build src/LaunchDarkly.Logging.Log4net
+      - run:
+          name: run tests
+          command: dotnet test test/LaunchDarkly.Logging.Log4net.Tests
+
+  build-test-windows:
+    parameters:
+      build-target-framework:
+        type: string
+      test-target-framework:
+        type: string
+    executor:
+      name: win/default
+      shell: powershell.exe
+    environment:
+      ASPNETCORE_SUPPRESSSTATUSMESSAGES: true
+      BUILDFRAMEWORKS: <<parameters.build-target-framework>>
+      TESTFRAMEWORK: <<parameters.test-target-framework>>
+    steps:
+      - checkout
+      - run:
+          name: restore dependencies
+          command: dotnet restore src/LaunchDarkly.Logging.Log4net
+      - run:
+          name: build
+          command: dotnet build src/LaunchDarkly.Logging.Log4net
+      - run:
+          name: run tests
+          command: dotnet test test/LaunchDarkly.Logging.Log4net.Tests
