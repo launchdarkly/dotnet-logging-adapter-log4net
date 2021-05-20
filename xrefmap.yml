@@ -1,0 +1,27 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: LaunchDarkly.Logging
+  name: LaunchDarkly.Logging
+  href: api/LaunchDarkly.Logging.html
+  commentId: N:LaunchDarkly.Logging
+  fullName: LaunchDarkly.Logging
+  nameWithType: LaunchDarkly.Logging
+- uid: LaunchDarkly.Logging.LdLog4net
+  name: LdLog4net
+  href: api/LaunchDarkly.Logging.LdLog4net.html
+  commentId: T:LaunchDarkly.Logging.LdLog4net
+  fullName: LaunchDarkly.Logging.LdLog4net
+  nameWithType: LdLog4net
+- uid: LaunchDarkly.Logging.LdLog4net.Adapter
+  name: Adapter
+  href: api/LaunchDarkly.Logging.LdLog4net.html#LaunchDarkly_Logging_LdLog4net_Adapter
+  commentId: P:LaunchDarkly.Logging.LdLog4net.Adapter
+  fullName: LaunchDarkly.Logging.LdLog4net.Adapter
+  nameWithType: LdLog4net.Adapter
+- uid: LaunchDarkly.Logging.LdLog4net.Adapter*
+  name: Adapter
+  href: api/LaunchDarkly.Logging.LdLog4net.html#LaunchDarkly_Logging_LdLog4net_Adapter_
+  commentId: Overload:LaunchDarkly.Logging.LdLog4net.Adapter
+  fullName: LaunchDarkly.Logging.LdLog4net.Adapter
+  nameWithType: LdLog4net.Adapter
