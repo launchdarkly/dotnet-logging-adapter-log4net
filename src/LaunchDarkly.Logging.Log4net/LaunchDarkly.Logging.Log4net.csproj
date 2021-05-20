@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Version>1.0.1</Version>
+    <!--
+      The reason there's a mechanism here for overriding the target frameworks with
+      an environment variable is that we want to be able to run CI tests using older
+      SDKs which do not consider "net5.0" to be a valid target framework that can be
+      referenced in a project file.
+    -->
+    <BuildFrameworks Condition="'$(BUILDFRAMEWORKS)' == ''">netstandard2.0;netstandard2.1</BuildFrameworks>
+    <TargetFrameworks>$(BUILDFRAMEWORKS)</TargetFrameworks>
+    <DebugType>portable</DebugType>
+    <AssemblyName>LaunchDarkly.Logging.Log4net</AssemblyName>
+    <OutputType>Library</OutputType>
+    <LangVersion>7.3</LangVersion>
+    <PackageId>LaunchDarkly.Logging.Log4net</PackageId>
+    <Description>LaunchDarkly logging adapter for log4net</Description>
+    <Company>LaunchDarkly</Company>
+    <Authors>LaunchDarkly</Authors>
+    <Owners>LaunchDarkly</Owners>
+    <Copyright>Copyright 2021 LaunchDarkly</Copyright>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LaunchDarkly.Logging" Version="[1.0.0,]" />
+    <PackageReference Include="log4net" Version="[2.0.6,3.0.0)" />
+  </ItemGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <AssemblyOriginatorKeyFile>../../LaunchDarkly.Logging.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\LaunchDarkly.Logging.Log4net.xml</DocumentationFile>
+  </PropertyGroup>
+</Project>
