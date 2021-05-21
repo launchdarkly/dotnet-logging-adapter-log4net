@@ -20,7 +20,8 @@
     <Owners>LaunchDarkly</Owners>
     <Copyright>Copyright 2021 LaunchDarkly</Copyright>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <PackageProjectUrl>https://github.com/launchdarkly/dotnet-logging-adapter-log4net</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/launchdarkly/dotnet-logging-adapter-log4net</RepositoryUrl>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
