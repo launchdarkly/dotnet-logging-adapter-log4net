@@ -1,0 +1,10 @@
+{
+  "packages": {
+    ".": {
+      "release-type": "simple",
+      "bootstrap-sha": "143b96aedaca89d7cf99955e307052e1b20627eb",
+      "include-v-in-tag": false,
+      "include-component-in-tag": false
+    }
+  }
+}
