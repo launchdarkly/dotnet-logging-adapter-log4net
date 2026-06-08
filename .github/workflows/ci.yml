@@ -17,11 +17,13 @@ jobs:
       matrix:
           os: ['ubuntu-latest', 'windows-latest']
           dotnet: [{sdk: '8.x', test-framework: 'net8.0'}, {sdk: '9.x', test-framework: 'net9.0'}]
+          log4net-version: ['2.0.12', '3.3.0']
     runs-on: ${{ matrix.os }}
-    name: Build ${{ matrix.os }} - ${{ matrix.dotnet.sdk }} - ${{ matrix.dotnet.test-framework }}
+    name: Build ${{ matrix.os }} - ${{ matrix.dotnet.sdk }} - ${{ matrix.dotnet.test-framework }} - log4net ${{ matrix.log4net-version }}
     env:
       BUILDFRAMEWORKS: netstandard2.1
       TESTFRAMEWORK: ${{ matrix.dotnet.test-framework }}
+      LOG4NET_VERSION: ${{ matrix.log4net-version }}
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/ci
