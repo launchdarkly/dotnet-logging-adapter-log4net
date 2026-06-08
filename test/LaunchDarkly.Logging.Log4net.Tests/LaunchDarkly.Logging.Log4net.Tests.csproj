@@ -3,13 +3,14 @@
     <TestFramework Condition="'$(TESTFRAMEWORK)' == ''">net8.0</TestFramework>
     <TargetFrameworks>$(TESTFRAMEWORK)</TargetFrameworks>
     <AssemblyName>LaunchDarkly.Logging.Log4net.Tests</AssemblyName>
+    <LOG4NET_VERSION Condition="'$(LOG4NET_VERSION)' == ''">2.0.12</LOG4NET_VERSION>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.7.1" />
     <PackageReference Include="xunit" Version="2.4.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3" />
-    <PackageReference Include="log4net" Version="2.0.12" />
+    <PackageReference Include="log4net" Version="$(LOG4NET_VERSION)" />
   </ItemGroup>
 
   <ItemGroup>
