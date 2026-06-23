@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>LaunchDarkly Logging API for .NET - Log4net Adapter | LaunchDarkly Logging API for .NET - log4net Adapter </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="LaunchDarkly Logging API for .NET - Log4net Adapter | LaunchDarkly Logging API for .NET - log4net Adapter ">
+    
+    
+      <link rel="shortcut icon" href="favicon.ico">
+      <link rel="stylesheet" href="styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="styles/docfx.css">
+      <link rel="stylesheet" href="styles/main.css">
+      <meta property="docfx:navrel" content="">
+      <meta property="docfx:tocrel" content="">
+    
+    <meta property="docfx:rel" content="">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="LaunchDarkly Logging API for .NET - log4net Adapter">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="launchdarkly-logging-api-for-net---log4net-adapter">LaunchDarkly Logging API for .NET - Log4net Adapter</h1>
+
+<p><a href="https://www.nuget.org/packages/LaunchDarkly.Logging.Log4net/"><img src="https://img.shields.io/nuget/v/LaunchDarkly.Logging.Log4net.svg?style=flat-square" alt="NuGet"></a>
+<a href="https://github.com/launchdarkly/dotnet-logging-adapter-log4net/actions/workflows/ci.yml"><img src="https://github.com/launchdarkly/dotnet-logging-adapter-log4net/actions/workflows/ci.yml/badge.svg" alt="Build and Test"></a>
+<a href="https://launchdarkly.github.io/dotnet-logging-adapter-log4net"><img src="https://img.shields.io/static/v1?label=GitHub+Pages&amp;message=reference&amp;color=00add8" alt="Documentation"></a></p>
+<h2 id="overview">Overview</h2>
+<p>This .NET package provides integration from the <a href="https://launchdarkly.github.io/dotnet-logging"><code>LaunchDarkly.Logging</code></a> API that is used by the LaunchDarkly <a href="https://github.com/launchdarkly/dotnet-server-sdk">.NET SDK</a>, <a href="https://github.com/launchdarkly/xamarin-client-sdk">Xamarin SDK</a>, and other LaunchDarkly libraries, to the <a href="https://logging.apache.org/log4net/">Apache log4net</a> framework.</p>
+<p>For more information and examples, see the <a href="https://launchdarkly.github.io/dotnet-logging-adapter-log4net">API documentation</a>.</p>
+<h2 id="supported-net-versions">Supported .NET versions</h2>
+<p>The package is built for two target frameworks:</p>
+<ul>
+<li>.NET Standard 2.0: runs in .NET Core 2.1 and above, or in .NET 5.0 and above, or in library code that is targeted to .NET Standard 2.x.</li>
+<li>.NET Framework 4.5.2: runs in .NET Framework 4.5.2 and above.</li>
+</ul>
+<p>The .NET build tools should automatically load the most appropriate build of the library for whatever platform your application or library is targeted to.</p>
+<p>New versions of <code>LaunchDarkly.Logging.Log4net</code> will be released as necessary to support higher versions of log4net if they become available.</p>
+<h2 id="contributing">Contributing</h2>
+<p>See <a href="https://github.com/launchdarkly/dotnet-logging-adapter-log4net/blob/master/CONTRIBUTING.md">Contributing</a>.</p>
+<h2 id="signing">Signing</h2>
+<p>The published version of this assembly is digitally signed with Authenticode and <a href="https://docs.microsoft.com/en-us/dotnet/framework/app-domains/strong-named-assemblies">strong-named</a>. Building the code locally in the default Debug configuration does not use strong-naming and does not require a key file. The public key file is in this repo at <code>LaunchDarkly.Logging.pk</code> as well as here:</p>
+<pre><code>Public Key:
+2400000080040000009400000206000024000000535231410400000000010001
+afcbfe1e33dbb0c823ca71ef053aed35a49a7f1e601d9ee27fe86b78062b1d83
+30814ed41ccaf3817ff3f699766e5debb3dd46fd75f7439fc2fe390fcee65465
+a8a17f69f1bef56e253fc9166096c907514ab74b812d041faa04712e2bcb243d
+1038eed2b0023a35a41782d70c65cb4b51d189576df0b7846e9378a5d0758a39
+
+Public Key Token: d9182e4b0afd33e7
+</code></pre>
+<h2 id="verifying-build-provenance-with-the-slsa-framework">Verifying build provenance with the SLSA framework</h2>
+<p>LaunchDarkly uses the <a href="https://slsa.dev/spec/v1.0/about">SLSA framework</a> (Supply-chain Levels for Software Artifacts) to help developers make their supply chain more secure by ensuring the authenticity and build integrity of our published packages. To learn more, see the <a href="PROVENANCE.html">provenance guide</a>.</p>
+<h2 id="about-launchdarkly">About LaunchDarkly</h2>
+<ul>
+<li>LaunchDarkly is a continuous delivery platform that provides feature flags as a service and allows developers to iterate quickly and safely. We allow you to easily flag your features and manage them from the LaunchDarkly dashboard.  With LaunchDarkly, you can:
+<ul>
+<li>Roll out a new feature to a subset of your users (like a group of users who opt-in to a beta tester group), gathering feedback and bug reports from real-world use cases.</li>
+<li>Gradually roll out a feature to an increasing percentage of users, and track the effect that the feature has on key metrics (for instance, how likely is a user to complete a purchase if they have feature A versus feature B?).</li>
+<li>Turn off a feature that you realize is causing performance problems in production, without needing to re-deploy, or even restart the application with a changed configuration file.</li>
+<li>Grant access to certain features based on user attributes, like payment plan (eg: users on the 'gold' plan get access to more features than users in the 'silver' plan). Disable parts of your application to facilitate maintenance, without taking everything offline.</li>
+</ul>
+</li>
+<li>LaunchDarkly provides feature flag SDKs for a wide variety of languages and technologies. Check out <a href="https://docs.launchdarkly.com/docs">our documentation</a> for a complete list.</li>
+<li>Explore LaunchDarkly
+<ul>
+<li><a href="https://www.launchdarkly.com/" title="LaunchDarkly Main Website">launchdarkly.com</a> for more information</li>
+<li><a href="https://docs.launchdarkly.com/" title="LaunchDarkly Documentation">docs.launchdarkly.com</a> for our documentation and SDK reference guides</li>
+<li><a href="https://apidocs.launchdarkly.com/" title="LaunchDarkly API Documentation">apidocs.launchdarkly.com</a> for our API documentation</li>
+<li><a href="https://blog.launchdarkly.com/" title="LaunchDarkly Blog Documentation">blog.launchdarkly.com</a> for the latest product updates</li>
+</ul>
+</li>
+</ul>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/launchdarkly/dotnet-logging-adapter-log4net/blob/main/README.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>
