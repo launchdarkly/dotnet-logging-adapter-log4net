@@ -2,6 +2,13 @@
 
 All notable changes to the project will be documented in this file. For full release notes for the projects that depend on this project, see their respective changelogs. This file describes changes only to the common code. This project adheres to [Semantic Versioning](http://semver.org).
 
+## [1.1.0](https://github.com/launchdarkly/dotnet-logging-adapter-log4net/compare/1.0.1...1.1.0) (2026-06-11)
+
+
+### Features
+
+* widen log4net version constraint to allow v3 ([cc14bec](https://github.com/launchdarkly/dotnet-logging-adapter-log4net/commit/cc14bec6919850e742cd87b7702a24710ac8808b))
+
 ## [1.0.1] - 2021-05-20
 ### Changed:
 - Updated dependencies on `LaunchDarkly.Logging` to version 1.0.1.
