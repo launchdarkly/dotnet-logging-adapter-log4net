@@ -17,6 +17,8 @@ The package is built for two target frameworks:
 * .NET Standard 2.0: runs in .NET Core 2.1 and above, or in .NET 5.0 and above, or in library code that is targeted to .NET Standard 2.x.
 * .NET Framework 4.5.2: runs in .NET Framework 4.5.2 and above.
 
+While these are the minimum supported versions, you should use the latest patched version of a supported .NET release.
+
 The .NET build tools should automatically load the most appropriate build of the library for whatever platform your application or library is targeted to.
 
 New versions of `LaunchDarkly.Logging.Log4net` will be released as necessary to support higher versions of log4net if they become available.
